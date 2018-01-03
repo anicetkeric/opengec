@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+
+
+    	
+        <menuitem id="company_courier_header" name="Courier Management"/>
+
+        <menuitem id="company_courier_general_menu" name="Couriers" parent="company_courier_header" sequence="11"/>
+
+
+        <menuitem id="company_courier_report_menu" name="Reports" parent="company_courier_header" sequence="15"/>
+
+
+        <menuitem id="company_courier_configuration_menu" name="Configuration" parent="company_courier_header" sequence="20"/>
+
+
+  <!-- ############################################### summary ################################################################################### -->
+           <!-- Action for company courier summary  -->
+ <record id="open_company_courier_summary_form_tree" model="ir.actions.act_window">
+            <field name="name">Courier Summary</field>
+           <field name="res_model">courier.couriers</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new courier
+                </p>
+            </field>
+</record> 
+
+ <record id="open_company_courier_summary_view" model="ir.ui.view">
+            <field name="name">courier.summary.tree</field>
+            <field name="model">courier.couriers</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Courier">
+                    <field name="name" />
+                </tree>
+            </field>
+</record>
+<menuitem id="company_courier_general_summary_menu" name="Courier Summary" parent="company_courier_general_menu" action="open_company_courier_summary_form_tree"/>
+
+
+ <!-- Action for company courier personal  -->
+ <record id="open_company_courier_personal_form_tree" model="ir.actions.act_window">
+            <field name="name">Courier Nature</field>
+           <field name="res_model">courier.nature</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new nature courier
+                </p>
+            </field>
+</record> 
+
+ <record id="open_company_courier_personal_view" model="ir.ui.view">
+            <field name="name">courier.nature.tree</field>
+            <field name="model">courier.nature</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Courier">
+                    <field name="name" />
+                </tree>
+            </field>
+</record>
+<menuitem id="company_courier_general_personal_menu" name="My couriers" parent="company_courier_general_menu" action="open_company_courier_personal_form_tree"/>
+
+
+  <!-- ############################################### end summary ################################################################################### -->
+  
+  
+  
+  
+  <!-- ############################################### Config ################################################################################### -->
+           <!-- Action for company courier type  -->
+ <record id="open_company_courier_type_form_tree" model="ir.actions.act_window">
+            <field name="name">Courier Type</field>
+           <field name="res_model">courier.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new type courier
+                </p>
+            </field>
+</record> 
+
+ <record id="open_company_courier_type_view" model="ir.ui.view">
+            <field name="name">courier.type.tree</field>
+            <field name="model">courier.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Courier">
+                    <field name="name" />
+                </tree>
+            </field>
+</record>
+<menuitem id="company_courier_configuration_type_menu" name="Type" parent="company_courier_configuration_menu" action="open_company_courier_type_form_tree"/>
+
+
+ <!-- Action for company courier nature  -->
+ <record id="open_company_courier_nature_form_tree" model="ir.actions.act_window">
+            <field name="name">Courier Nature</field>
+           <field name="res_model">courier.nature</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new nature courier
+                </p>
+            </field>
+</record> 
+
+ <record id="open_company_courier_nature_view" model="ir.ui.view">
+            <field name="name">courier.nature.tree</field>
+            <field name="model">courier.nature</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Courier">
+                    <field name="name" />
+                </tree>
+            </field>
+</record>
+<menuitem id="company_courier_configuration_nature_menu" name="Nature" parent="company_courier_configuration_menu" action="open_company_courier_nature_form_tree"/>
+
+
+  <!-- ############################################### end Config ################################################################################### -->
+
+
+
+
+    </data>
+</odoo>
