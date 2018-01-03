@@ -1,2 +1,2 @@
 # opengec
-gestion électronique du courrier
+Oddo - Courier management
