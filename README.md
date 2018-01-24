@@ -1,2 +1,2 @@
 # opengec
-Oddo - Courier management
+Odoo - Courier management
